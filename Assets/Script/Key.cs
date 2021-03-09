@@ -17,7 +17,7 @@ public class Key : MonoBehaviour
     // Update function to destroy the key object if the user collide to it
     void Update()
     {
-         if ((player.transform.position - this.transform.position).sqrMagnitude < 3*3){
+         if ((player.transform.position - this.transform.position).sqrMagnitude < 2*2){
              
              Destroy(gameObject);
             

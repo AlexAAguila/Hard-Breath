@@ -8,7 +8,7 @@ public class UnlockKey : MonoBehaviour
     public GameObject key;
   public GameObject[] statue = new GameObject [4];
   
-
+public Animator keyanimation;
     
     public Animator chest;
  //start function to find gameobject and its component
@@ -16,6 +16,7 @@ public class UnlockKey : MonoBehaviour
     
       key = GameObject.Find("rust_key");
 chest = GameObject.Find("chest").GetComponent<Animator>();
+keyanimation = GameObject.Find("rust_key").GetComponent<Animator>();
 
      }
 
@@ -38,11 +39,13 @@ if(rotation <= -90 && rotation >= -91 && sum<= -360 && sum >= -361 ){
           key.GetComponent<MeshRenderer>().enabled=true;
           key.GetComponent<MeshCollider>().enabled=true;
           chest.SetBool("isOpen", true);
+          keyanimation.SetBool("isOpen", true);
   }else{
     ////if false, chest will closed and key will not show up
       key.GetComponent<MeshRenderer>().enabled=false;
-    key.GetComponent<MeshRenderer>().enabled=false;
+    key.GetComponent<MeshCollider>().enabled=false;
     chest.SetBool("isOpen", false);
+    keyanimation.SetBool("isOpen", false);
   }
     }
 
