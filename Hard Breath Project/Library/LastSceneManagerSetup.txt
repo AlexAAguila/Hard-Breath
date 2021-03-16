@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/AlexScenes/TopFloor.unity
+=======
+- path: Assets/Scenes/Scene1.unity
+>>>>>>> TopFloor
   isLoaded: 1
   isActive: 1
   isSubScene: 0

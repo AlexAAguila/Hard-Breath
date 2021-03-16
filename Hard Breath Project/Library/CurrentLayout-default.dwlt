@@ -113,9 +113,15 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 678, y: 492}
+<<<<<<< HEAD
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: 119
+=======
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 23
+>>>>>>> TopFloor
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +143,17 @@ MonoBehaviour:
     y: 0
     width: 1324
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 120
+=======
+  m_MinSize: {x: 402, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 16
+>>>>>>> TopFloor
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +175,17 @@ MonoBehaviour:
     y: 0
     width: 1324
     height: 588
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 121
+=======
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
+  vertical: 0
+  controlID: 17
+>>>>>>> TopFloor
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +205,13 @@ MonoBehaviour:
     y: 0
     width: 307
     height: 588
+<<<<<<< HEAD
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> TopFloor
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -461,7 +486,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: dcb2feff2cb3feffce01ffff6403ffffca82ffff5899ffff70a2ffff7ea2ffff08afffff6eb2ffff7ad3ffff66fbffff0cf88e43
+=======
+      m_ExpandedIDs: 18f1fefff816ffff66a7ffff7aa7ffff6afbffff00000000
+>>>>>>> TopFloor
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -521,9 +550,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 664.5695, y: -19.930824, z: 20.969826}
     speed: 2
     m_Value: {x: 664.5695, y: -19.930824, z: 20.969826}
+=======
+    m_Target: {x: 635.33215, y: 3.9499333, z: 31.230057}
+    speed: 2
+    m_Value: {x: 635.33215, y: 3.9499333, z: 31.230057}
+>>>>>>> TopFloor
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -569,6 +604,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.24149106, y: -0.7320189, z: 0.5500404, w: -0.32138646}
     speed: 2
     m_Value: {x: -0.24197248, y: -0.7311918, z: 0.551137, w: -0.32102332}
@@ -576,6 +612,15 @@ MonoBehaviour:
     m_Target: 60.29008
     speed: 2
     m_Value: 60.29008
+=======
+    m_Target: {x: -0.11261957, y: 0.13992155, z: -0.016020734, w: -0.9836065}
+    speed: 2
+    m_Value: {x: -0.11114406, y: 0.13994545, z: -0.015810838, w: -0.98377454}
+  m_Size:
+    m_Target: 6.8145213
+    speed: 2
+    m_Value: 7.1356244
+>>>>>>> TopFloor
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -665,21 +710,28 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Backup Space\1. SFU\Spring 2021\IAT 445\Final Project\Hard-Breath\Hard
     Breath Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 90390000
     m_LastClickedID: 14736
     m_ExpandedIDs: 0000000090390000923900009e390000a2390000b4390000ac3c000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 08370000
+    m_LastClickedID: 14088
+    m_ExpandedIDs: 00000000ea3300008e360000b63600004a37000000ca9a3b
+>>>>>>> TopFloor
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,7 +759,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000009039000092390000
+=======
+    m_ExpandedIDs: 00000000ea330000
+>>>>>>> TopFloor
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
