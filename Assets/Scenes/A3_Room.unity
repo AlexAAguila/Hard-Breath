@@ -41318,6 +41318,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  keyanimation: {fileID: 0}
   chest: {fileID: 0}
 --- !u!114 &804720829
 MonoBehaviour:
@@ -45513,6 +45514,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  keyanimation: {fileID: 0}
   chest: {fileID: 0}
 --- !u!64 &881956552
 MeshCollider:
@@ -66657,6 +66659,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  keyanimation: {fileID: 0}
   chest: {fileID: 0}
 --- !u!1 &1154613122
 GameObject:
@@ -69259,6 +69262,7 @@ MonoBehaviour:
   - {fileID: 804720827}
   - {fileID: 1990693228}
   - {fileID: 881956549}
+  keyanimation: {fileID: 0}
   chest: {fileID: 2098067903}
 --- !u!1001 &1222180836
 PrefabInstance:
@@ -113655,6 +113659,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  keyanimation: {fileID: 0}
   chest: {fileID: 0}
 --- !u!64 &1990693231
 MeshCollider:
