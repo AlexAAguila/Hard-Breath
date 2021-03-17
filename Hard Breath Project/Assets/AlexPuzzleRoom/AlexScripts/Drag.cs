@@ -35,7 +35,6 @@ public class Drag : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = playerCam;//This causes the item to be the child of the player
             beingCarried = true;
-            this.transform.GetChild(3).gameObject.SetActive(true);//Sets the bottle colour asset to active
         }
         else if (beingCarried && Input.GetMouseButtonDown(1)) //If left mouse key is pressed while the item is being carried, then the item is dropped
         {

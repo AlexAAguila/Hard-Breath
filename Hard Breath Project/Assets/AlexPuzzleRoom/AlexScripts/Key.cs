@@ -23,7 +23,6 @@ public class Key : MonoBehaviour
         switch (keyType)
         {
             default:
-            case KeyType.Pink:   return Color.magenta;
             case KeyType.Teal: return Color.cyan;
             case KeyType.Yellow:  return Color.yellow;
         }

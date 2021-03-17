@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/AlexScenes/BottomFloor.unity
+    guid: 6925126dd680ef34ca497eefd8a3c9e4
+  - enabled: 1
+    path: Assets/AlexPuzzleRoom/AlexPuzzleRoom/AlexPuzzleRoom.unity
+    guid: 7512a49f843ef7a4ab9d6ae9d5511d87
   m_configObjects: {}

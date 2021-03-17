@@ -46,13 +46,7 @@ public class UI_KeyHolder : MonoBehaviour
             keyTransform.gameObject.SetActive(true);
             keyTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(80 * i, 0);
             Image keyImage = keyTransform.Find("image").GetComponent<Image>();
-            switch (keyType)
-            {
-                default:
-                case Key.KeyType.Pink: keyImage.color = Color.magenta; break;
-                case Key.KeyType.Teal: keyImage.color = Color.cyan; break;
-                case Key.KeyType.Yellow: keyImage.color = Color.yellow; break;
-            }
+
         }
     }
 }

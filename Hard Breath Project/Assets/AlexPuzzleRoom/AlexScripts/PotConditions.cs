@@ -12,6 +12,7 @@ public class PotConditions : MonoBehaviour
 
     public float amountOfBottles = 0;
     public AudioSource poor;
+    public GameObject bomb;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class PotConditions : MonoBehaviour
        if (amountOfBottles == 2) // Once both bottles are in then the condition is complete
         {
             Debug.Log("BOTTTLES!!!!");
-            
+            bomb.SetActive(true);
             Destroy(this);
         }
     }
