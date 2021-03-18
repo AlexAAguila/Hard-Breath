@@ -60,10 +60,14 @@ MonoBehaviour:
 =======
     width: 1522
     height: 966
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 111
+>>>>>>> TopFloor
+=======
+  controlID: 80
 >>>>>>> TopFloor
 --- !u!114 &3
 MonoBehaviour:
@@ -90,8 +94,13 @@ MonoBehaviour:
 =======
     width: 308
     height: 966
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> TopFloor
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
 >>>>>>> TopFloor
   m_ActualView: {fileID: 14}
   m_Panes:
@@ -121,9 +130,14 @@ MonoBehaviour:
 =======
     width: 300
     height: 584
+<<<<<<< HEAD
 >>>>>>> TopFloor
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> TopFloor
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -188,8 +202,12 @@ MonoBehaviour:
 =======
     width: 1522
     height: 1016
+<<<<<<< HEAD
 >>>>>>> TopFloor
   m_MinSize: {x: 875, y: 300}
+=======
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> TopFloor
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -268,10 +286,14 @@ MonoBehaviour:
 =======
     width: 1214
     height: 966
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 112
+>>>>>>> TopFloor
+=======
+  controlID: 110
 >>>>>>> TopFloor
 --- !u!114 &10
 MonoBehaviour:
@@ -302,10 +324,14 @@ MonoBehaviour:
 =======
     width: 1214
     height: 584
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 113
+>>>>>>> TopFloor
+=======
+  controlID: 111
 >>>>>>> TopFloor
 --- !u!114 &11
 MonoBehaviour:
@@ -332,8 +358,13 @@ MonoBehaviour:
 =======
     width: 914
     height: 584
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> TopFloor
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> TopFloor
   m_ActualView: {fileID: 16}
   m_Panes:
@@ -415,6 +446,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/AlexPuzzleRoom/AlexPuzzleRoom
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -426,6 +458,13 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/EmilyAssets/Scripts
+>>>>>>> TopFloor
+=======
+    - Assets/Standard Assets/2D
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Standard Assets/2D
 >>>>>>> TopFloor
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\SFU 2021\IAT445\git\Hard-Breath\Hard Breath Project
@@ -439,9 +478,15 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000b83c0000ba3c0000c03c0000ca3c0000ee3c0000ee440000704a0000744a000000ca9a3b
 =======
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 54640000
     m_LastClickedID: 25684
     m_ExpandedIDs: 000000000c6400004264000000ca9a3b
+>>>>>>> TopFloor
+=======
+    m_SelectedIDs: 903d0000
+    m_LastClickedID: 15760
+    m_ExpandedIDs: 00000000083d0000123d0000163d0000943d0000aa3d000000ca9a3b
 >>>>>>> TopFloor
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -470,7 +515,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c6400000e640000
+    m_ExpandedIDs: 00000000083d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -497,7 +542,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -612,10 +657,17 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 338}
       m_SelectedIDs: f071ffff
       m_LastClickedID: -36368
       m_ExpandedIDs: 2ea3ffff38620000
+>>>>>>> TopFloor
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 023b0000
+      m_LastClickedID: 15106
+      m_ExpandedIDs: 68fbfffff43800000c3b0000
 >>>>>>> TopFloor
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -684,6 +736,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 5.569337, y: 1.9463999, z: 0.03399992}
     speed: 2
     m_Value: {x: 5.569337, y: 1.9463999, z: 0.03399992}
@@ -691,6 +744,11 @@ MonoBehaviour:
     m_Target: {x: 656.2961, y: 1.6923895, z: 41.124355}
     speed: 2
     m_Value: {x: 656.2961, y: 1.6923895, z: 41.124355}
+>>>>>>> TopFloor
+=======
+    m_Target: {x: 614.82, y: 2.0101929, z: 50.06}
+    speed: 2
+    m_Value: {x: 614.82, y: 2.01019, z: 50.06}
 >>>>>>> TopFloor
   m_RenderMode: 0
   m_CameraMode:
@@ -738,6 +796,7 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.45696113, y: 0.26026118, z: -0.14180899, w: -0.8386569}
     speed: 2
     m_Value: {x: -0.45696008, y: 0.26026058, z: -0.14180866, w: -0.838655}
@@ -747,12 +806,19 @@ MonoBehaviour:
     m_Value: 4.2219286
 =======
     m_Target: {x: 0.022951493, y: -0.92996657, z: 0.3621959, w: 0.058942936}
+=======
+    m_Target: {x: -0.11236809, y: -0.8851455, z: 0.28197092, w: -0.35272044}
+>>>>>>> TopFloor
     speed: 2
-    m_Value: {x: 0.022407897, y: -0.93004245, z: 0.36222544, w: 0.057547204}
+    m_Value: {x: -0.11289542, y: -0.88470894, z: 0.28329432, w: -0.35254648}
   m_Size:
-    m_Target: 15.686974
+    m_Target: 8.788488
     speed: 2
+<<<<<<< HEAD
     m_Value: 15.660459
+>>>>>>> TopFloor
+=======
+    m_Value: 8.410037
 >>>>>>> TopFloor
   m_Ortho:
     m_Target: 0
@@ -835,8 +901,13 @@ MonoBehaviour:
 =======
     m_HBaseRangeMin: -456
     m_HBaseRangeMax: 456
+<<<<<<< HEAD
     m_VBaseRangeMin: -196
     m_VBaseRangeMax: 196
+>>>>>>> TopFloor
+=======
+    m_VBaseRangeMin: -206.5
+    m_VBaseRangeMax: 206.5
 >>>>>>> TopFloor
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -854,6 +925,7 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 21
 <<<<<<< HEAD
       width: 1140
@@ -861,10 +933,17 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 570, y: 261}
 =======
+=======
+      y: 0
+>>>>>>> TopFloor
       width: 912
-      height: 392
+      height: 413
     m_Scale: {x: 1, y: 1}
+<<<<<<< HEAD
     m_Translation: {x: 456, y: 196}
+>>>>>>> TopFloor
+=======
+    m_Translation: {x: 456, y: 206.5}
 >>>>>>> TopFloor
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -879,9 +958,13 @@ MonoBehaviour:
       height: 522
 =======
       x: -456
-      y: -196
+      y: -206.5
       width: 912
+<<<<<<< HEAD
       height: 392
+>>>>>>> TopFloor
+=======
+      height: 413
 >>>>>>> TopFloor
     m_MinimalGUI: 1
   m_defaultScale: 1
