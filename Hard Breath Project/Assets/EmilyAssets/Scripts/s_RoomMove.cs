@@ -7,9 +7,7 @@ public class s_RoomMove : MonoBehaviour
 {
     [SerializeField] private string sceneName; //[SerializeField] allows you to see private variables in the editor without making them public
 
-    private void Start()
-    {
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
