@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/AlexPuzzleRoom/AlexPuzzleRoom/AlexPuzzleRoom.unity
+- path: Assets/AlexScenes/BottomFloor.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
