@@ -9,10 +9,15 @@ public class KeyHolder : MonoBehaviour
     public event EventHandler OnKeysChanged;
 
     private List<Key.KeyType> keyList;
+    public AudioSource doorBomb;
+    public AudioSource pickup;
+
+
 
     private void Awake()
     {
         keyList = new List<Key.KeyType>();
+        
     }
 
     public List<Key.KeyType> GetKeyList()
@@ -45,6 +50,7 @@ public class KeyHolder : MonoBehaviour
         {
             AddKey(key.GetKeyType());
             Destroy(key.gameObject);
+            pickup.Play();
         }
 
         KeyDoor keyDoor = other.GetComponent<KeyDoor>();
@@ -54,6 +60,7 @@ public class KeyHolder : MonoBehaviour
             {
                 RemoveKey(keyDoor.GetKeyType());
                 keyDoor.OpenDoor();
+                doorBomb.Play();
             }
             else
             {

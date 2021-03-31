@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_KeyHolder : MonoBehaviour
-{/*
+{
     [SerializeField] private KeyHolder keyHolder;
 
     private Transform container;
@@ -49,5 +49,5 @@ public class UI_KeyHolder : MonoBehaviour
 
         }
     }
-    */
+    
 }

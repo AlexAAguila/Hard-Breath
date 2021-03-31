@@ -12,9 +12,14 @@ public class Drag : MonoBehaviour
     public Transform playerCam;// Follows camera's position
     bool hasPlayer = false;// If player is in range
     bool beingCarried = false; //If the item is being carried
+
+
+    public AudioSource pickup;
+
     void Start()
     {
-        
+        pickup = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -35,6 +40,8 @@ public class Drag : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = playerCam;//This causes the item to be the child of the player
             beingCarried = true;
+            pickup.Play();
+            
         }
         else if (beingCarried && Input.GetMouseButtonDown(1)) //If left mouse key is pressed while the item is being carried, then the item is dropped
         {
