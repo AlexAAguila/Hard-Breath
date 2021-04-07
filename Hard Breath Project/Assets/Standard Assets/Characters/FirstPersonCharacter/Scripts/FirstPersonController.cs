@@ -43,6 +43,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public bool paused;
+        public bool releasedPauseButton;
+        public float storedSpeed;
+
         // Use this for initialization
         private void Start()
         {
@@ -56,6 +60,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            paused = false;
+            releasedPauseButton = true;
+            storedSpeed = 0;
         }
 
 
@@ -132,6 +140,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             UpdateCameraPosition(speed);
 
             m_MouseLook.UpdateCursorLock();
+
+
+
+            //pause stuff
+             if (CrossPlatformInputManager.GetAxis("Cancel") == 0)
+             {
+                 releasedPauseButton = true;
+             }
         }
 
 
@@ -180,64 +196,97 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void UpdateCameraPosition(float speed)
         {
-            Vector3 newCameraPosition;
-            if (!m_UseHeadBob)
+            if (!paused)
             {
-                return;
+                Vector3 newCameraPosition;
+                if (!m_UseHeadBob)
+                {
+                    return;
+                }
+                if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
+                {
+                    m_Camera.transform.localPosition =
+                        m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
+                                          (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
+                    newCameraPosition = m_Camera.transform.localPosition;
+                    newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
+                }
+                else
+                {
+                    newCameraPosition = m_Camera.transform.localPosition;
+                    newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
+                }
+                m_Camera.transform.localPosition = newCameraPosition;
             }
-            if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
-            {
-                m_Camera.transform.localPosition =
-                    m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
-                                      (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
-            }
-            else
-            {
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
-            }
-            m_Camera.transform.localPosition = newCameraPosition;
         }
 
 
         private void GetInput(out float speed)
         {
-            // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            //if paused, only read pause inputs. Otherwise run as normal
+            if (!paused)
+            {
+                // Read input
+                float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+                float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
-            bool waswalking = m_IsWalking;
+                bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
-            // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+                // On standalone builds, walk/run speed is modified by a key press.
+                // keep track of whether or not the character is walking or running
+                m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
-            // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
-            m_Input = new Vector2(horizontal, vertical);
+                // set the desired speed to be walking or running
+                speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+                m_Input = new Vector2(horizontal, vertical);
 
-            // normalize input if it exceeds 1 in combined length:
-            if (m_Input.sqrMagnitude > 1)
-            {
-                m_Input.Normalize();
+                // normalize input if it exceeds 1 in combined length:
+                if (m_Input.sqrMagnitude > 1)
+                {
+                    m_Input.Normalize();
+                }
+
+                // handle speed change to give an fov kick
+                // only if the player is going to a run, is running and the fovkick is to be used
+                if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                }
+
+                if (CrossPlatformInputManager.GetAxis("Cancel") > 0 && releasedPauseButton)
+                {
+                    paused = true;
+                    storedSpeed = speed;
+                    releasedPauseButton = false;
+                    m_MouseLook.SetCursorLock(false);
+                }
             }
-
-            // handle speed change to give an fov kick
-            // only if the player is going to a run, is running and the fovkick is to be used
-            if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
+            else
             {
-                StopAllCoroutines();
-                StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                //if player presses esc, unpause
+                if (CrossPlatformInputManager.GetAxis("Cancel") > 0 && releasedPauseButton)
+                {
+                    paused = false;
+                    releasedPauseButton = false;
+                    speed = storedSpeed;
+                    m_MouseLook.SetCursorLock(true);
+                }
+                else
+                {
+                    speed = 0;
+                }
             }
         }
 
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            if (!paused)
+            {
+                m_MouseLook.LookRotation (transform, m_Camera.transform);
+            }
         }
 
 
