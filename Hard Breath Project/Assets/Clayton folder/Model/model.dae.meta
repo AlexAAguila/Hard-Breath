@@ -1,9 +1,49 @@
 fileFormatVersion: 2
-guid: c3937dabdc5ea2643983e060a5bf23d2
+guid: 35259efd8f2bdc049840de9cec86c64e
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bouleau_occidental_Tangentiel
+    second: {fileID: 2100000, guid: 3b358c8489a85dc43a73febc4b254d48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_007
+    second: {fileID: 2100000, guid: c7bff1c8bfaff9e41b3bd3bfc9de9ebf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Seamed
+    second: {fileID: 2100000, guid: 77896e5ff356d574a98e51f6136352b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Seamed_0
+    second: {fileID: 2100000, guid: bcca4d3bcf49b9e4e90dec27606099da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel_Tube
+    second: {fileID: 2100000, guid: 2839d1e995f9e274caa458fc55fe6835, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone_Granite_Midnite
+    second: {fileID: 2100000, guid: d60e66aefdd35af41b04dc642fe6ef20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __Metal_Corrogated_Shiny_1
+    second: {fileID: 2100000, guid: e2915d686c78f414f8023128340021ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material
+    second: {fileID: 2100000, guid: 034e7386c4fc4a240af23da1b72cc5b4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
