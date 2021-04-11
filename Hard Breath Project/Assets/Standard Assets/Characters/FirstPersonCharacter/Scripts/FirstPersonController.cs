@@ -47,6 +47,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool releasedPauseButton;
         public float storedSpeed;
 
+
+        public GameObject myFlashlight;
+        private bool releasedLightButton;
+
         // Use this for initialization
         private void Start()
         {
@@ -64,6 +68,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             paused = false;
             releasedPauseButton = true;
             storedSpeed = 0;
+
+            releasedLightButton = true;
+            myFlashlight = GameObject.FindWithTag("flashlight");
+            if (myFlashlight == null)
+            {
+                //create flashlight at point of FirstPersonCharacter - a few Ys
+                myFlashlight = (GameObject)Resources.Load("flashLight");
+                if (myFlashlight == null) Debug.Log("no flashlight prefab");
+                else myFlashlight = Instantiate(myFlashlight, m_Camera.transform);
+            }
+
         }
 
 
@@ -148,6 +163,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
              {
                  releasedPauseButton = true;
              }
+
+            //flashlight stuff
+            if (CrossPlatformInputManager.GetAxis("Fire2") == 0)
+            {
+                releasedLightButton = true;
+            }
+
         }
 
 
@@ -261,6 +283,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     storedSpeed = speed;
                     releasedPauseButton = false;
                     m_MouseLook.SetCursorLock(false);
+                }
+
+                if (CrossPlatformInputManager.GetAxis("Fire2") > 0 && releasedLightButton)
+                {
+                    
+                    // if intensity 1, turn to 0, and vice versa
+                    if (myFlashlight.GetComponent<Light>().intensity == 1)
+                    {
+                        myFlashlight.GetComponent<Light>().intensity = 0;
+                        Debug.Log("off");
+                    }
+                    else
+                    {
+                        myFlashlight.GetComponent<Light>().intensity = 1;
+                        Debug.Log("on");
+                    }
+                    releasedLightButton = false;
                 }
             }
             else
