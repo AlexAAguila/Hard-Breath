@@ -18,8 +18,10 @@ public class PickUp : MonoBehaviour
     GetComponent<BoxCollider>().enabled = false;
     GetComponent<Rigidbody>().useGravity = false;
 
-    //this parts here change the position of the object to that of the users "hands"
-    this.transform.position = theDest.position;
+
+
+        //this parts here change the position of the object to that of the users "hands"
+        this.transform.position = theDest.position;
     this.transform.parent= GameObject.Find("Destination").transform;
   }
 
@@ -28,10 +30,25 @@ public class PickUp : MonoBehaviour
   void OnMouseUp()
   {
 
-    // here we basically just undo what we prevoisly did to return the attributes of
-    //the objects to their original state
-    this.transform.parent = null;
-    GetComponent<Rigidbody>().useGravity = true;
-    GetComponent<BoxCollider>().enabled = true;
-  }
-}
+        //Calling the code to place the item down
+        LetGo();
+
+    }
+
+    public void LetGo()
+    {
+        // here we basically just undo what we prevoisly did to return the attributes of
+        //the objects to their original state
+        this.transform.parent = null;
+        GetComponent<Rigidbody>().useGravity = true;
+        GetComponent<BoxCollider>().enabled = true;
+        transform.rotation = Quaternion.identity; //Resets Rotation
+
+    }
+    void OnCollisionEnter(Collision collision)//This is called in case the object hits a wall
+    {
+        LetGo();
+    
+    }
+
+    }
