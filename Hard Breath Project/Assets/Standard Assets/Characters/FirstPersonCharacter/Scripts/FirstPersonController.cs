@@ -292,12 +292,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     if (myFlashlight.GetComponent<Light>().intensity == 1)
                     {
                         myFlashlight.GetComponent<Light>().intensity = 0;
-                        Debug.Log("off");
+                        //Debug.Log("off");
                     }
                     else
                     {
                         myFlashlight.GetComponent<Light>().intensity = 1;
-                        Debug.Log("on");
+                        //Debug.Log("on");
                     }
                     releasedLightButton = false;
                 }
