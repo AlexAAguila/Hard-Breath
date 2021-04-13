@@ -72,6 +72,7 @@ public class s_fadeIn : MonoBehaviour
                 }
                 else
                 {
+                    SceneManager.LoadScene("BottomFloor");
                     fadingOut = false;
                 }
             }
@@ -81,7 +82,8 @@ public class s_fadeIn : MonoBehaviour
             {
                 if (Input.anyKeyDown)
                 {
-                    SceneManager.LoadScene("BottomFloor");
+                    fadingOut = true;
+//                    
                 }
             }
         }
