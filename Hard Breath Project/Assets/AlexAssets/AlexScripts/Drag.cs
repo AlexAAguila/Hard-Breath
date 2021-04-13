@@ -12,7 +12,8 @@ public class Drag : MonoBehaviour
     public Transform playerCam;// Follows camera's position
     bool hasPlayer = false;// If player is in range
     bool beingCarried = false; //If the item is being carried
-
+                               
+    public Transform hands;//here i declare the variable of where the destination will be
 
     public AudioSource pickup;
 
@@ -40,10 +41,13 @@ public class Drag : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = playerCam;//This causes the item to be the child of the player
             beingCarried = true;
+            //this parts here change the position of the object to that of the users "hands"
+            this.transform.position = hands.position;
+            this.transform.parent = GameObject.Find("Destination").transform;
             pickup.Play();
             
         }
-        else if (beingCarried && Input.GetMouseButtonDown(1)) //If left mouse key is pressed while the item is being carried, then the item is dropped
+        else if (beingCarried && Input.GetMouseButtonUp(0)) //If mouse key is let go while the item is being carried, then the item is dropped
         {
             beingCarried = false;
             hasPlayer = false;
@@ -52,6 +56,8 @@ public class Drag : MonoBehaviour
             this.transform.GetChild(3).gameObject.SetActive(false);//Sets the bottle colour asset to inactive
 
         }
+
+
 
 
 

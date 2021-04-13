@@ -11,6 +11,8 @@ public class KeyHolder : MonoBehaviour
     private List<Key.KeyType> keyList;
     public AudioSource doorBomb;
     public AudioSource pickup;
+    public GameObject bridge;
+    public GameObject table;
 
 
 
@@ -61,6 +63,8 @@ public class KeyHolder : MonoBehaviour
                 RemoveKey(keyDoor.GetKeyType());
                 keyDoor.OpenDoor();
                 doorBomb.Play();
+                bridge.SetActive(true);
+                table.SetActive(false);
             }
             else
             {
