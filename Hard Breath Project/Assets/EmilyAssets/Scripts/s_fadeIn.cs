@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class s_fadeIn : MonoBehaviour
 {
@@ -12,17 +13,25 @@ public class s_fadeIn : MonoBehaviour
     public bool fadingOut;
     public float fadeSpeed = 0.05f;
     public float currentFade = 0.0f;
-    public float delayTimer = 5.0f;
+    public float delayTimer = 4.0f;
     public GameObject myScreenFade;
     //public GameObject myPlayer;
 
-    
+    public RawImage myFade;
+    public Texture myTitleScreen;
+
+    //private Color fadeColor;
+
     void Start()
     {
         startFadeIn = true;
         fadingIn= false;
         fadingOut = false;
         startFadeOut = false;
+
+        myFade = myScreenFade.GetComponent<RawImage>();
+
+        //fadeColor = myFade.GetComponent<Image>().color;
 
         if (myScreenFade == null) myScreenFade = GameObject.Find("Directional Light");
         //if (myPlayer == null) myPlayer = GameObject.Find("Player");
@@ -41,21 +50,25 @@ public class s_fadeIn : MonoBehaviour
             {
                 startFadeIn = false;
                 fadingIn = true;
-                currentFade = 1.0f;
+                currentFade = 0.0f;
             }
             if (startFadeOut)
             {
                 startFadeOut = false;
                 fadingOut = true;
-                currentFade = 0.0f;
+                currentFade = 1.0f;
             }
 
             if (fadingIn)
             {
-                if (currentFade <=2)
+                if (currentFade <=1)
                 {
                     currentFade+= fadeSpeed;
-                    myScreenFade.GetComponent<Light>().intensity = currentFade;
+                    //myScreenFade.GetComponent<Light>().intensity = currentFade;
+                    //Debug.Log(255 * (1-currentFade));
+                    myFade.color = new Color(myFade.color.r, myFade.color.g, myFade.color.b, 1-currentFade);
+                    //myFade.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,currentFade);
+
                 
                 }
                 else
@@ -68,7 +81,10 @@ public class s_fadeIn : MonoBehaviour
                 if (currentFade > 0)
                 {
                     currentFade -= fadeSpeed;
-                    myScreenFade.GetComponent<Light>().intensity = currentFade;                
+                    //myScreenFade.GetComponent<Light>().intensity = currentFade;
+                    //Debug.Log(currentFade);
+                    myFade.color = new Color(myFade.color.r, myFade.color.g, myFade.color.b, 1-currentFade);
+                    //myScreenFade.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f, currentFade);                
                 }
                 else
                 {
@@ -98,5 +114,11 @@ public class s_fadeIn : MonoBehaviour
     public void beginFadeOut()
     {
         startFadeOut = true;
+    }
+
+    void OnGUI()
+    {
+        
+       //GUI.DrawTexture(new Rect(0,0,Screen.width, Screen.height), myTitleScreen, ScaleMode.ScaleToFit, true);
     }
 }

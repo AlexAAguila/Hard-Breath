@@ -11,4 +11,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BottomFloor.unity
     guid: 6925126dd680ef34ca497eefd8a3c9e4
+  - enabled: 1
+    path: Assets/Scenes/AlexScenes/AlexPuzzleRoom.unity
+    guid: 64a12a7a3102e2445af521b624687c57
+  - enabled: 1
+    path: Assets/Scenes/ClaytonScenes/statuescene.unity
+    guid: ba1ba3552c75cdb4da1162b0aae0a505
+  - enabled: 1
+    path: Assets/Scenes/ClaytonScenes/diningroom.unity
+    guid: 5d8a240096fab1849aa30ae1aa9bdecf
+  - enabled: 1
+    path: Assets/Scenes/JPScenes/BedRoom.unity
+    guid: 63b5633730e5353418fe0c1cc632c83e
+  - enabled: 1
+    path: Assets/Scenes/JPScenes/Dungeon.unity
+    guid: 03c1b5e4d46269048ad8736f0b0b5681
+  - enabled: 1
+    path: Assets/Scenes/JPScenes/Empty Room.unity
+    guid: 48a768e33bc140b4ba0bf0ea1931d254
+  - enabled: 1
+    path: Assets/Scenes/JPScenes/JPTO Puzzle.unity
+    guid: 351f1c7e89985e141b81e04708879797
   m_configObjects: {}

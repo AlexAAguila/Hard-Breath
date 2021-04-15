@@ -78,7 +78,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (myFlashlight == null) Debug.Log("no flashlight prefab");
                 else myFlashlight = Instantiate(myFlashlight, m_Camera.transform);
             }
+            
+            GameObject manager = GameObject.Find("InventoryManager");
+           // manager.GetComponent<s_Inventory>().setPlayer(this);
 
+            //manager.GetComponent<s_Inventory>().setPlayer(this);
+            //GameObject.FindWithTag("Manager").GetComponent<s_Inventory>().setPlayer(this);
         }
 
 

@@ -17,45 +17,41 @@ public class s_tempPuzzle : MonoBehaviour
         {
             if (puzzleNumber == 1)
             {
-                if (myInventory.GetComponent<s_Inventory>().item1)
+                if (myInventory.GetComponent<s_Inventory>().rkey)
                 {
                     Destroy(gameObject);
                 }
             }
             if (puzzleNumber == 2)
             {
-                if (myInventory.GetComponent<s_Inventory>().item2)
+                if (myInventory.GetComponent<s_Inventory>().bkey)
                 {
                     Destroy(gameObject);
                 }
             }
             if (puzzleNumber == 3)
             {
-                if (myInventory.GetComponent<s_Inventory>().item3)
+                if (myInventory.GetComponent<s_Inventory>().gkey)
                 {
                     Destroy(gameObject);
                 }
             }
             if (puzzleNumber == 4)
             {
-                if (myInventory.GetComponent<s_Inventory>().item4)
+                if (myInventory.GetComponent<s_Inventory>().ykey)
                 {
                     Destroy(gameObject);
                 }
             }
             if (puzzleNumber == 5)
             {
-                if (myInventory.GetComponent<s_Inventory>().item5)
-                {
+                
                     Destroy(gameObject);
-                }
             }
             if (puzzleNumber == 6)
             {
-                if (myInventory.GetComponent<s_Inventory>().item6)
-                {
+                
                     Destroy(gameObject);
-                }
             }
         }
     }
@@ -69,45 +65,32 @@ public class s_tempPuzzle : MonoBehaviour
 
             if (puzzleNumber == 1)
             {
-                myInventory.GetComponent<s_Inventory>().item1 = true;
+                myInventory.GetComponent<s_Inventory>().rkey = true;
                 Destroy(gameObject);
                 Debug.Log("Bump");
             }
             if (puzzleNumber == 2)
             {
-                myInventory.GetComponent<s_Inventory>().item2 = true;
+                myInventory.GetComponent<s_Inventory>().bkey = true;
                 
                 Destroy(gameObject);
                 Debug.Log("Bump");
             }
             if (puzzleNumber == 3)
             {
-                myInventory.GetComponent<s_Inventory>().item3 = true;
+                myInventory.GetComponent<s_Inventory>().gkey = true;
                 
                 Destroy(gameObject);
                 Debug.Log("Bump");
             }
             if (puzzleNumber == 4)
             {
-                myInventory.GetComponent<s_Inventory>().item4 = true;
+                myInventory.GetComponent<s_Inventory>().ykey = true;
                 
                 Destroy(gameObject);
                 Debug.Log("Bump");
             }
-            if (puzzleNumber == 5)
-            {
-                myInventory.GetComponent<s_Inventory>().item5 = true;
-                
-                Destroy(gameObject);
-                Debug.Log("Bump");
-            }
-            if (puzzleNumber == 6)
-            {
-                myInventory.GetComponent<s_Inventory>().item6 = true;
-                
-                Destroy(gameObject);
-                Debug.Log("Bump");
-            }
+            
         }
     }
 }

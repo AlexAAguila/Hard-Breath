@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - flashlight
+  - transition
+  - blue
+  - red
+  - manager
   layers:
   - Default
   - TransparentFX
