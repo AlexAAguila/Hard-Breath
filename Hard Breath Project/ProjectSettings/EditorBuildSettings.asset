@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JPScenes/JPTO Puzzle.unity
     guid: 351f1c7e89985e141b81e04708879797
+  - enabled: 1
+    path: Assets/Scenes/JPScenes/MAze.unity
+    guid: bfdc659b3646aff47b9a969a2edf2c17
   m_configObjects: {}

@@ -18,7 +18,13 @@ public class s_fadeIn : MonoBehaviour
     //public GameObject myPlayer;
 
     public RawImage myFade;
-    public Texture myTitleScreen;
+    public Texture[] myScreens;
+    public int counter;
+    private string newRoom;
+
+    private bool playableRoom;
+
+    public GameObject currentDisplay;
 
     //private Color fadeColor;
 
@@ -29,17 +35,20 @@ public class s_fadeIn : MonoBehaviour
         fadingOut = false;
         startFadeOut = false;
 
+        counter = 0;
+
         myFade = myScreenFade.GetComponent<RawImage>();
-
-        //fadeColor = myFade.GetComponent<Image>().color;
-
-        if (myScreenFade == null) myScreenFade = GameObject.Find("Directional Light");
-        //if (myPlayer == null) myPlayer = GameObject.Find("Player");
+        currentDisplay = GameObject.Find("startScreen");
+        newRoom = "";
+       
+       if (GameObject.FindWithTag("Player")) playableRoom = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (delayTimer > 0)
         {
             delayTimer -= Time.fixedDeltaTime;
@@ -88,18 +97,40 @@ public class s_fadeIn : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("BottomFloor");
-                    fadingOut = false;
+                    if (counter < myScreens.Length)
+                    {
+                        beginFadeIn();
+                        currentDisplay.GetComponent<RawImage>().texture = myScreens[counter];
+                        counter+=1;
+                        fadingOut = false;
+                    }
+                    else
+                    {
+                        if (SceneManager.GetActiveScene().name != "EndingScene")
+                        {
+                            if (newRoom != "")
+                            {
+                                SceneManager.LoadScene(newRoom);
+                                GameObject.FindWithTag("manager").GetComponent<s_Inventory>().resetFirstFrame();
+                            }
+                            else SceneManager.LoadScene("BottomFloor");
+                            fadingOut = false;
+                        }
+                        else
+                        {
+                            //exit the game
+                            Application.Quit();
+                        }
+                    }
                 }
             }
 
-            //listen to any key input to start fading and moving to bottom floor
-            if (!fadingIn && !fadingOut)
+            //listen to any key input to start fading 
+            if (!fadingIn && !fadingOut && !playableRoom)
             {
                 if (Input.anyKeyDown)
                 {
                     fadingOut = true;
-//                    
                 }
             }
         }
@@ -116,9 +147,10 @@ public class s_fadeIn : MonoBehaviour
         startFadeOut = true;
     }
 
-    void OnGUI()
+    public void beginFadeOut(string destination)
     {
-        
-       //GUI.DrawTexture(new Rect(0,0,Screen.width, Screen.height), myTitleScreen, ScaleMode.ScaleToFit, true);
+        startFadeOut = true;
+        newRoom = destination;
     }
+    
 }

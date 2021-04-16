@@ -18,12 +18,12 @@ public class s_RoomMove : MonoBehaviour
     {
         if (other.GetComponent<Collider>().tag == "Player")
         {
-            Debug.Log("Loading Scene: " + sceneName);
+            //Debug.Log("Loading Scene: " + sceneName);
             manager = GameObject.Find("InventoryManager");
             manager.GetComponent<s_Inventory>().setPreviousRoom(SceneManager.GetActiveScene().name);
-            manager.GetComponent<s_Inventory>().resetFirstFrame();
-            //GameObject.FindWithTag("Manager").GetComponent<s_Inventory>().resetFirstFrame();
-            SceneManager.LoadScene(sceneName);
+            //manager.GetComponent<s_Inventory>().resetFirstFrame();
+            
+            GameObject.FindWithTag("fader").GetComponent<s_fadeIn>().beginFadeOut(sceneName);
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - blue
   - red
   - manager
+  - fader
   layers:
   - Default
   - TransparentFX

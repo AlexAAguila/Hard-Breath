@@ -65,24 +65,34 @@ public class s_Inventory : MonoBehaviour
         
         if (fourthFrame)
         {
-            if (myPlayer == null)
-            {
+            
+            Debug.Log("Previous room: " + previousRoom);
+            
+                Debug.Log("Finding Player");
                 myPlayer = GameObject.FindWithTag("Player");
-                myPlayer.GetComponent<CharacterController>().enabled = false;
-            }
+                if (myPlayer != null)
+                {
+                    myPlayer.GetComponent<CharacterController>().enabled = false;
+                }
+                else
+                {
+                    Debug.Log("No player found");
+                }
 
             if (SceneManager.GetActiveScene().name == "BottomFloor" && previousRoom != "")
             {
+                Debug.Log("Checking spawn points");
                 //check for each scene name
                 if (previousRoom == "BedRoom")
                 {
+                    Debug.Log("From Bedroom");
                     GameObject temp = GameObject.Find("BedRoomSpawn");
                     myPlayer.transform.position = temp.transform.position;
                     myPlayer.transform.rotation = temp.transform.rotation;
                 }
-                else if (previousRoom == "Dungeon")
+                else if (previousRoom == "MAze")
                 {
-                    GameObject temp = GameObject.Find("DungeonSpawn");
+                    GameObject temp = GameObject.Find("MazeSpawn");
                     myPlayer.transform.position = temp.transform.position;
                     myPlayer.transform.rotation = temp.transform.rotation;
                 }
@@ -112,6 +122,7 @@ public class s_Inventory : MonoBehaviour
                 }
                 else if (previousRoom == "Empty Room")
                 {
+                    Debug.Log("From Empty");
                     GameObject temptemp = GameObject.Find("EmptySpawn");
                     myPlayer.transform.position = temptemp.transform.position;
                     myPlayer.transform.Rotate(0f,180f,0f , Space.Self);
@@ -120,22 +131,25 @@ public class s_Inventory : MonoBehaviour
             }
             fourthFrame = false;
             myPlayer.GetComponent<CharacterController>().enabled = true;
-        }
-        if (firstFrame)
-        {
-            firstFrame = false;
-            secondFrame = true;
-        }
-        if (secondFrame)
-        {
-            secondFrame = false;
-            thirdFrame = true;
+            Debug.Log("Done checking");
         }
         if (thirdFrame)
         {
             thirdFrame = false;
             fourthFrame = true;
         }
+        if (secondFrame)
+        {
+            secondFrame = false;
+            thirdFrame = true;
+        }
+        if (firstFrame)
+        {
+            firstFrame = false;
+            secondFrame = true;
+        }
+        
+        
     }
 
     public void setPreviousRoom(string name)
@@ -145,6 +159,7 @@ public class s_Inventory : MonoBehaviour
 
     public void resetFirstFrame()
     {
+
         firstFrame = true;
         secondFrame = false;
     }
@@ -152,5 +167,11 @@ public class s_Inventory : MonoBehaviour
     public void setPlayer(GameObject player)
     {
         myPlayer = player;
+    }
+
+    public bool keyCheck()
+    {
+        if (rkey && bkey && gkey && ykey) return true;
+        else return false;
     }
 }
