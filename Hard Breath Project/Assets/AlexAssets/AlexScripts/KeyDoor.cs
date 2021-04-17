@@ -17,6 +17,7 @@ public class KeyDoor : MonoBehaviour
     public void OpenDoor()
     {
         door.OpenDoor();
+        Debug.Log("I'm being played");
     }
 
     public void CloseDoor()

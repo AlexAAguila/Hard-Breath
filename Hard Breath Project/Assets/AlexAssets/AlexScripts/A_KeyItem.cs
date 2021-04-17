@@ -18,8 +18,8 @@ public class A_KeyItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.FindWithTag("manager").GetComponent<s_Inventory>().gkey = true;
-        Destroy(this.gameObject);
+      //  GameObject.FindWithTag("manager").GetComponent<s_Inventory>().gkey = true;
+      //  Destroy(this.gameObject);
 
     }
 }

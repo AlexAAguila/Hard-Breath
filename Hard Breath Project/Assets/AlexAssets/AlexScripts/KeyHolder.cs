@@ -70,7 +70,7 @@ public class KeyHolder : MonoBehaviour
             }
             else
             {
-                keyDoor.CloseDoor();
+            //    keyDoor.CloseDoor();
             }
             
         }
