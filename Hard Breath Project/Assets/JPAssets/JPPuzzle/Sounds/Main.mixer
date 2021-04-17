@@ -20,7 +20,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: background
+  m_Name: background sounds
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 3360cb1a4a8c74e48802af72ad7a0924
   m_Children: []
@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walking
+  m_Name: walking s
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 2d8814b210dbf794087319b564d650bf
   m_Children: []
@@ -156,8 +156,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: bbfba7670642e1444af938243b7cdde6
   m_FloatValues:
-    027db202e2f3a9748b722e6bf1410a28: -17.29471
-    95e0cef35373c8c45a87b43f894b9c49: -2.2889833
+    027db202e2f3a9748b722e6bf1410a28: -19.928473
+    95e0cef35373c8c45a87b43f894b9c49: -3.8468575
     0b9697d7ca37f4d46bd3bb6156329ad1: 4.165108
     ffa7d9dd8fd344c46914109c30dced1a: 2.4583216
   m_TransitionOverrides: {}
