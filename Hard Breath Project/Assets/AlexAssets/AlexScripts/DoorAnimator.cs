@@ -19,6 +19,7 @@ public class DoorAnimator : MonoBehaviour
     public void CloseDoor()
     {
         animator.SetBool("Open", false);
+        Destroy(this.gameObject);
     }
 
 }

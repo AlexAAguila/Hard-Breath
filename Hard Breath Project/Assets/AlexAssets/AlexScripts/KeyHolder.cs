@@ -47,6 +47,8 @@ public class KeyHolder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+
         Key key = other.GetComponent<Key>();
         if(key != null)
         {
