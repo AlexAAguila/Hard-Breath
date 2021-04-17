@@ -59702,9 +59702,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "       experimentations and sometimes to create new things using that
-    brand new table I bought\n\n\n\n\n\n                                            
-    bang\n\n\n          sneak out through a hole."
+  m_Text: 'experimentations and sometimes to create new things using that brand new
+    table I bought
+
+
+
+
+
+
+    bang
+
+
+    sneak out through a hole on the door.'
 --- !u!222 &1664620980
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70362,11 +70371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "I originally had a room made to dump trash in until I repurposed it
-        for my own \n\n\nNow, I think I have another purpose for it. I always made
-        sure to lock the door but\u2026 some curious mouse stuck their nose where
-        it didn\u2019t belong. As a showman I thought by reward such behavior with
-        a       would sound appropriate. Or so I thought\u2026 but like the mice
-        they would "
+        for my own \n\n\n                                Now, I think I have another
+        purpose for it. I always made sure to lock the door but\u2026 some curious
+        mouse stuck their nose where it didn\u2019t belong. As a showman I thought
+        by reward such behavior with a \n          would sound appropriate. Or so
+        I thought\u2026 but like the mice they would "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e152c1418c8b34eb6b5abd746644b9, type: 3}
