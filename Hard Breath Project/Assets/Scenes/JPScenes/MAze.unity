@@ -16337,6 +16337,11 @@ PrefabInstance:
       propertyPath: myScreens.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7220406073628827150, guid: e37206f866982c8478f1d6ecbc5a1d70,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7220406075426102204, guid: e37206f866982c8478f1d6ecbc5a1d70,
         type: 3}
       propertyPath: m_Color.a

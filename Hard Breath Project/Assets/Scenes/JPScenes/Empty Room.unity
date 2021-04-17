@@ -7801,6 +7801,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5283291230900160208, guid: e37206f866982c8478f1d6ecbc5a1d70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7220406073628827144, guid: e37206f866982c8478f1d6ecbc5a1d70,
         type: 3}
       propertyPath: m_Name
@@ -7915,6 +7920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: myScreens.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220406073628827150, guid: e37206f866982c8478f1d6ecbc5a1d70,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7220406075426102204, guid: e37206f866982c8478f1d6ecbc5a1d70,
         type: 3}
@@ -8221,18 +8231,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2002663263, guid: 63d72dc936b641f4ab868e10bc5d48c6, type: 3}
       propertyPath: m_Text
-      value: "                                      how they handle my things.          
-        don\u2019t put things in the right places\n\n\n\n\n\nvases"
+      value: "                                          how they handle my things.          
+        don\u2019t put things in the right places  \n\n\n\n\n\n      vases"
       objectReference: {fileID: 0}
     - target: {fileID: 9150191197417620616, guid: 63d72dc936b641f4ab868e10bc5d48c6,
         type: 3}
       propertyPath: m_Text
-      value: "The little mice that sneak around should be careful about \n                               
-        If you\n                                           , you don\u2019t know
-        how obvious it is that I\u2019ve known they\u2019ve been there. This is why
-        to teach them a little lesson I\u2026 made some adjustments to this room
-        in case they decide to move around my\n           once again. When I see
-        them again, we\u2019ll have a nice long chat about touching my things"
+      value: "The little mice that sneak around should be careful about \n                                 
+        If you\n                                                , you don\u2019t
+        know how obvious it is that I\u2019ve known they\u2019ve been there. This
+        is why to teach them a little lesson I\u2026 made some adjustments to this
+        room in case they decide to move around my             once again. When I
+        see them again, we\u2019ll have a nice long chat about touching my things"
       objectReference: {fileID: 0}
     - target: {fileID: 9150191197637086300, guid: 63d72dc936b641f4ab868e10bc5d48c6,
         type: 3}
