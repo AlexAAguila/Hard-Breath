@@ -43,9 +43,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-        public bool paused;
-        public bool releasedPauseButton;
-        public float storedSpeed;
+        //public bool paused;
+        //public bool releasedPauseButton;
+        //public float storedSpeed;
 
 
         public GameObject myFlashlight;
@@ -65,9 +65,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
 
-            paused = false;
-            releasedPauseButton = true;
-            storedSpeed = 0;
+            //paused = false;
+            //releasedPauseButton = true;
+            //storedSpeed = 0;
 
             releasedLightButton = true;
             myFlashlight = GameObject.FindWithTag("flashlight");
@@ -164,10 +164,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
             //pause stuff
-             if (CrossPlatformInputManager.GetAxis("Cancel") == 0)
+            /* if (CrossPlatformInputManager.GetAxis("Cancel") == 0)
              {
                  releasedPauseButton = true;
-             }
+             }*/
 
             //flashlight stuff
             if (CrossPlatformInputManager.GetAxis("Fire2") == 0)
@@ -223,8 +223,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void UpdateCameraPosition(float speed)
         {
-            if (!paused)
-            {
+            //if (!paused)
+            //{
                 Vector3 newCameraPosition;
                 if (!m_UseHeadBob)
                 {
@@ -244,15 +244,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
                 }
                 m_Camera.transform.localPosition = newCameraPosition;
-            }
+            //}
         }
 
 
         private void GetInput(out float speed)
         {
             //if paused, only read pause inputs. Otherwise run as normal
-            if (!paused)
-            {
+            //if (!paused)
+            //{
                 // Read input
                 float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
                 float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -281,14 +281,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     StopAllCoroutines();
                     StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
                 }
-
+/*
                 if (CrossPlatformInputManager.GetAxis("Cancel") > 0 && releasedPauseButton)
                 {
                     paused = true;
                     storedSpeed = speed;
                     releasedPauseButton = false;
                     m_MouseLook.SetCursorLock(false);
-                }
+                    //GameObject.Find("pause").GetComponent<s_pause>().activatePause();
+                }*/
 
                 if (CrossPlatformInputManager.GetAxis("Fire2") > 0 && releasedLightButton)
                 {
@@ -306,31 +307,32 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     }
                     releasedLightButton = false;
                 }
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 //if player presses esc, unpause
-                if (CrossPlatformInputManager.GetAxis("Cancel") > 0 && releasedPauseButton)
+                /*if (CrossPlatformInputManager.GetAxis("Cancel") > 0 && releasedPauseButton)
                 {
                     paused = false;
                     releasedPauseButton = false;
                     speed = storedSpeed;
                     m_MouseLook.SetCursorLock(true);
+                    //GameObject.Find("pause").GetComponent<s_pause>().deactivatePause();
                 }
                 else
                 {
                     speed = 0;
-                }
-            }
+                }*/
+            //}
         }
 
 
         private void RotateView()
         {
-            if (!paused)
-            {
+            //if (!paused)
+            //{
                 m_MouseLook.LookRotation (transform, m_Camera.transform);
-            }
+            //}
         }
 
 
@@ -349,5 +351,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+
+        /*public bool isPaused()
+        {
+            return paused;
+        }*/
     }
+
 }

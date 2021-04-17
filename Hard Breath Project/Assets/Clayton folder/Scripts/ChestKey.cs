@@ -21,8 +21,9 @@ public class ChestKey : MonoBehaviour
              
              Destroy(gameObject);
             
-   keyCollect = true;
-    }
+            keyCollect = true;
+            GameObject.FindWithTag("manager").GetComponent<s_Inventory>().bkey = true;
+        }
    
     }
 }

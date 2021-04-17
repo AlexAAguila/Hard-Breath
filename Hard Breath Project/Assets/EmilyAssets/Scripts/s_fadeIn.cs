@@ -47,7 +47,10 @@ public class s_fadeIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (SceneManager.GetActiveScene().name != "EndingScene" || SceneManager.GetActiveScene().name != "EndingScene")
+        {
+            currentDisplay.GetComponent<RawImage>().color = new Color (currentDisplay.GetComponent<RawImage>().color.r,currentDisplay.GetComponent<RawImage>().color.g,currentDisplay.GetComponent<RawImage>().color.b,0);
+        }
 
         if (delayTimer > 0)
         {
@@ -151,6 +154,7 @@ public class s_fadeIn : MonoBehaviour
     {
         startFadeOut = true;
         newRoom = destination;
+        Debug.Log(destination);
     }
     
 }
