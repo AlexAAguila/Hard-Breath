@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class s_Inventory : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class s_Inventory : MonoBehaviour
 
     private bool firstFrame, secondFrame, thirdFrame, fourthFrame;
 
-    //singleton logic taken from unitygeek.com/unity_c_singleton
+    private bool finalCheck, postFourth;
+    private RawImage rkeyGUI, bkeyGUI, gkeyGUI, ykeyGUI;
+    private GameObject rOb, bOb, gOb, yOb;
+    //singleton logic adapted from unitygeek.com/unity_c_singleton
 
     private static s_Inventory instance = null;
     public static s_Inventory Instance
@@ -56,8 +60,13 @@ public class s_Inventory : MonoBehaviour
 
     void Start()
     {
-        
         myPlayer = GameObject.FindWithTag("Player");
+        rkey = false;
+        bkey = false;
+        gkey = false;
+        ykey = false;
+        finalCheck = false;
+        postFourth = false;
     }
 
     void Update()
@@ -65,10 +74,10 @@ public class s_Inventory : MonoBehaviour
         
         if (fourthFrame)
         {
-            
+            postFourth = true;
             Debug.Log("Previous room: " + previousRoom);
             
-                Debug.Log("Finding Player");
+                //Debug.Log("Finding Player");
                 myPlayer = GameObject.FindWithTag("Player");
                 if (myPlayer != null)
                 {
@@ -131,7 +140,23 @@ public class s_Inventory : MonoBehaviour
             }
             fourthFrame = false;
             myPlayer.GetComponent<CharacterController>().enabled = true;
-            Debug.Log("Done checking");
+            
+            //get the keychain values
+
+            rOb = GameObject.Find("keyr");
+            bOb = GameObject.Find("keyb");
+            gOb = GameObject.Find("keyg");
+            yOb = GameObject.Find("keyy");
+            rkeyGUI = rOb.GetComponent<RawImage>();
+            bkeyGUI = bOb.GetComponent<RawImage>();
+            ykeyGUI = yOb.GetComponent<RawImage>();
+            gkeyGUI = gOb.GetComponent<RawImage>();
+
+            //move them to the corner
+           // bOb.transform.position = new Vector3(-Screen.width*.1f, -Screen.height*.1f, 0);
+            //gOb.transform.position = new Vector3(-Screen.width*.1f + 20, -Screen.height*.1f, 0);
+            //rOb.transform.position = new Vector3(-Screen.width*.1f + 40, -Screen.height*.1f, 0);
+            //yOb.transform.position = new Vector3(-Screen.width*.1f + 60, -Screen.height*.1f, 0);
         }
         if (thirdFrame)
         {
@@ -149,7 +174,44 @@ public class s_Inventory : MonoBehaviour
             secondFrame = true;
         }
         
-        
+        if (!finalCheck && postFourth)
+        {
+            
+            //check keys. If keys collected turn them on in the canvas
+            if (rkey)
+            {
+                if (rkeyGUI.color.a == 0)
+                {
+                    rkeyGUI.color = new Color(rkeyGUI.color.r, rkeyGUI.color.g, rkeyGUI.color.b, 1);
+                }
+
+            }
+            if (bkey)
+            {
+                if (bkeyGUI.color.a == 0)
+                {
+                    bkeyGUI.color = new Color(bkeyGUI.color.r, bkeyGUI.color.g, bkeyGUI.color.b, 1);
+                }
+            }
+            if (gkey)
+            {
+                if (gkeyGUI.color.a == 0)
+                {
+                    gkeyGUI.color = new Color(gkeyGUI.color.r, gkeyGUI.color.g, gkeyGUI.color.b, 1);
+                }
+            }
+            if (ykey)
+            {
+                if (ykeyGUI.color.a == 0)
+                {
+                    ykeyGUI.color = new Color(ykeyGUI.color.r, ykeyGUI.color.g, ykeyGUI.color.b, 1);
+                }
+            }
+            if (rkey && bkey && gkey && ykey)
+            {
+                finalCheck = true;
+            }
+        }
     }
 
     public void setPreviousRoom(string name)
