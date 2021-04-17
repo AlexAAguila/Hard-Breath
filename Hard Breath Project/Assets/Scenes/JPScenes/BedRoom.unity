@@ -15675,7 +15675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2002663263, guid: 63d72dc936b641f4ab868e10bc5d48c6, type: 3}
       propertyPath: m_Text
-      value: "messing around with my statues\n\n\n\n\n\n              the painting\n                                
+      value: "messing around with my statues\n\n\n\n\n\nthe painting\n                 
         the right way"
       objectReference: {fileID: 0}
     - target: {fileID: 9150191197417620616, guid: 63d72dc936b641f4ab868e10bc5d48c6,
@@ -15685,9 +15685,10 @@ PrefabInstance:
         to try a little harder. Although, they probably never realized that\n\nwas
         a big mistake. They probably don\u2019t realize they\u2019re leaving the
         others to well\u2026 that\u2019s for what\u2019s left of them to find out.
-        Maybe if they only had been smart enough to take a look at                     
-        maybe they would\u2019ve figured out\nof doing things from the beginning.
-        It is fun seeing their faces in despair when the realization kicks in."
+        Maybe if they only had been smart enough to take a look at\n                    
+        maybe they would\u2019ve figured out                        of doing things
+        from the beginning. It is fun seeing their faces in despair when the realization
+        kicks in."
       objectReference: {fileID: 0}
     - target: {fileID: 9150191197637086300, guid: 63d72dc936b641f4ab868e10bc5d48c6,
         type: 3}

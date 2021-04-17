@@ -8219,6 +8219,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2141997005}
     m_Modifications:
+    - target: {fileID: 2002663263, guid: 63d72dc936b641f4ab868e10bc5d48c6, type: 3}
+      propertyPath: m_Text
+      value: "                                      how they handle my things.          
+        don\u2019t put things in the right places\n\n\n\n\n\nvases"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150191197417620616, guid: 63d72dc936b641f4ab868e10bc5d48c6,
+        type: 3}
+      propertyPath: m_Text
+      value: "The little mice that sneak around should be careful about \n                               
+        If you\n                                           , you don\u2019t know
+        how obvious it is that I\u2019ve known they\u2019ve been there. This is why
+        to teach them a little lesson I\u2026 made some adjustments to this room
+        in case they decide to move around my\n           once again. When I see
+        them again, we\u2019ll have a nice long chat about touching my things"
+      objectReference: {fileID: 0}
     - target: {fileID: 9150191197637086300, guid: 63d72dc936b641f4ab868e10bc5d48c6,
         type: 3}
       propertyPath: m_Pivot.x
