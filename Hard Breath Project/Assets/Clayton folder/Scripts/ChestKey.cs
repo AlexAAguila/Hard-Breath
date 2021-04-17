@@ -18,8 +18,9 @@ public class ChestKey : MonoBehaviour
     void Update()
     {
          if ((player.transform.position - this.transform.position).sqrMagnitude < 2*2){
-             
-             Destroy(gameObject);
+            GameObject.FindWithTag("manager").GetComponent<s_Inventory>().bkey = true;
+
+            Destroy(gameObject);
             
    keyCollect = true;
     }
