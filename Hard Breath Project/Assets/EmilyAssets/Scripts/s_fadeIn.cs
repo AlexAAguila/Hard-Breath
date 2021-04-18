@@ -47,9 +47,17 @@ public class s_fadeIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "EndingScene" || SceneManager.GetActiveScene().name != "EndingScene")
+        if (SceneManager.GetActiveScene().name != "OpeningScene")
         {
+            Debug.Log(SceneManager.GetActiveScene().name);
             currentDisplay.GetComponent<RawImage>().color = new Color (currentDisplay.GetComponent<RawImage>().color.r,currentDisplay.GetComponent<RawImage>().color.g,currentDisplay.GetComponent<RawImage>().color.b,0);
+        }
+
+        if (SceneManager.GetActiveScene().name == "EndingScene")
+        {
+            Debug.Log(SceneManager.GetActiveScene().name);
+            currentDisplay.GetComponent<RawImage>().color = new Color (currentDisplay.GetComponent<RawImage>().color.r,currentDisplay.GetComponent<RawImage>().color.g,currentDisplay.GetComponent<RawImage>().color.b,1);
+
         }
 
         if (delayTimer > 0)
